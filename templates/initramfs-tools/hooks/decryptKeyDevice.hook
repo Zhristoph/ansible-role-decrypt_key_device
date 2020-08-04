@@ -1,0 +1,7 @@
+#!/bin/sh
+# copy decryptKeyDevice files to initramfs
+#
+
+/usr/bin/mkdir -p "${DESTDIR}/etc/"
+/usr/bin/cp -p /etc/crypttab "${DESTDIR}/etc/"
+/usr/bin/cp -rp /etc/decryptKeyDevice "${DESTDIR}/etc/"

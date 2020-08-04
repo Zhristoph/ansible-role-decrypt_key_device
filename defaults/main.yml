@@ -1,0 +1,10 @@
+# Find your device by disk id.
+# For example for "/dev/disk/by-id/usb-Verbatim_STORE_N_GO_1917293427534641-0\:0"
+# set decryptKeyDevice_DiskID: "usb-Verbatim_STORE_N_GO_1917293427534641-0\:0"
+decryptKeyDevice_DiskID: "Broken-Set-decryptKeyDevice_DiskID-variable"
+decryptKeyDevice_BlockSize: 512
+decryptKeyDevice_SkipBlocks: 1
+decryptKeyDevice_ReadBlocks: 4
+decryptKeyDevice_RootDevice: "Broken-Set-decryptKeyDevice_RootDevice-variable-as-devicemapper-name"
+decryptKeyDevice_RootUUID: "Broken-Set-decryptKeyDevice_RootUUID-variable-by-blkid"
+

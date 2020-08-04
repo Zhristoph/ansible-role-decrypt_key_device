@@ -1,0 +1,2 @@
+{{ decryptKeyDevice_RootDevice }} UUID={{ decryptKeyDevice_RootUUID }} none tries=4,luks,discard,keyscript=/etc/decryptKeyDevice/decryptDevice.sh
+

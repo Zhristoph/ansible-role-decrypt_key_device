@@ -1,0 +1,32 @@
+---
+- name: Create directory for decryptKeyDevice
+  file:
+    dest: "{{ item }}"
+    state: directory
+    mode: 0700
+    owner: root
+    group: root
+  loop:
+   - /etc/decryptKeyDevice
+
+- name: Deploy configuration for decryptKeyDevice
+  template:
+    src: "{{ item }}"
+    dest: "/etc/{{ item }}"
+    mode: 0644
+    owner: root
+    group: root
+  loop:
+   - crypttab
+   - decryptKeyDevice/decryptKeyDevice.conf
+
+- name: Deploy scripts for decryptKeyDevice
+  template:
+    src: "{{ item }}"
+    dest: "/etc/{{ item }}"
+    mode: 0700
+    owner: root
+    group: root
+  loop:
+   - decryptKeyDevice/decryptDevice.sh
+   - initramfs-tools/hooks/decryptKeyDevice.hook     
