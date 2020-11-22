@@ -1,0 +1,7 @@
+all:
+  hosts:
+  children:
+    cryptostorage:
+      hosts:
+        cryptostorageserver01:
+        cryptostorageserver02:

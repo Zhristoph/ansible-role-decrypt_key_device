@@ -1,0 +1,7 @@
+- name: Automated decryption via USB device
+  hosts: cryptostorage
+  become: yes
+  gather_facts: no
+  roles:
+    - decrypt_key_device
+
